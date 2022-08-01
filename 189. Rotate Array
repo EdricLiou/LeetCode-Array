@@ -1,0 +1,6 @@
+void rotate(int* nums, int numsSize, int k){
+    k = k%numsSize; //adjust for when k>numsSize
+    reverse(nums,0,numsSize-1); //reverse whole array
+    reverse(nums,0,k-1);  // reverse first k elements
+    reverse(nums,k,numsSize-1); // reverse remaining elemends
+}
